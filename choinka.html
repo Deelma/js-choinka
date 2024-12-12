@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl_PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choineczka</title>
+    <style>
+
+        h2, p{
+            background-color: #e7d8f0ee;
+            text-align: center;
+            padding: 4px;
+        }
+
+        h2{
+            width: 100%;
+            font-size: 4vh;
+        }
+
+        p{
+            width: 25vw;
+            font-size: 3vh;
+            border: groove purple 3px;;
+        }
+
+        input, button{
+            border: none;
+            border-bottom: solid #e7d8f0ee 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Zamów choineczke</h2>
+    Wybierz ilość pięter: <input type="number" default="1" min="0" max="100" id="ilosc_pieter"><br>
+    <button onclick="choineczka()">Posortuj</button>
+    <p id="wynik">+</p>
+</body>
+</html>
+<script>
+
+    function choineczka(){
+
+        let pietra = document.querySelector("#ilosc_pieter").value;
+
+        let wynik = document.querySelector("#wynik");
+
+        wynik.innerHTML = "RAA";
+
+
+        let drzewo = "";
+
+        let pustosc = "";
+
+        for(let j = pietra; j > 0; j--){
+            pustosc += "s";
+        }
+
+        console.log(pustosc);
+
+        for(let i = 0; i <= pietra; i++){
+            pustosc -= "s";
+            drzewo += "*";
+            if(pustosc != ""){
+                console.log(pustosc + drzewo + "\n");
+            }else{
+                console.log(drzewo + "\n");
+            }
+        }
+        pustosc -= "s";
+console.log("skbiidit to: " + pustosc + drzewo);
+    }
+
+</script>
