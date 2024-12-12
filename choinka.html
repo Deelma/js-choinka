@@ -45,30 +45,25 @@
 
         let wynik = document.querySelector("#wynik");
 
-        wynik.innerHTML = "RAA";
-
-
+        wynik.innerHTML = "dasd";
+        
+        
         let drzewo = "";
-
+        
         let pustosc = "";
-
+        
         for(let j = pietra; j > 0; j--){
             pustosc += "s";
         }
-
+        
         console.log(pustosc);
-
+        
         for(let i = 0; i <= pietra; i++){
-            pustosc -= "s";
             drzewo += "*";
-            if(pustosc != ""){
-                console.log(pustosc + drzewo + "\n");
-            }else{
-                console.log(drzewo + "\n");
-            }
+            
+            console.log(pustosc + drzewo + "\n");
         }
-        pustosc -= "s";
-console.log("skbiidit to: " + pustosc + drzewo);
+
     }
 
 </script>
